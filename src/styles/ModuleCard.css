@@ -1,0 +1,105 @@
+/* src/styles/ModuleCard.css */
+
+.module-card {
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px var(--shadow-light);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 25px; /* Padding interior de la tarjeta */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  /* --- CLAVE PARA EL CARRUSEL: CONTROL DE ANCHO Y COMPORTAMIENTO FLEX --- */
+  /* Escritorio: 2 tarjetas por vista con un gap de 30px */
+  /* Cada tarjeta debe ocupar el 50% del espacio del contenedor, menos la mitad del gap. */
+  /* Si el gap es 30px, entonces (30px / 2) = 15px */
+  flex-basis: calc(50% - 15px);
+  flex-shrink: 0; /* ¡MUY IMPORTANTE! Evita que las tarjetas se encojan y se corten */
+  flex-grow: 0; /* Evita que las tarjetas crezcan más allá de su tamaño calculado */
+  box-sizing: border-box; /* Incluye padding y borde en el width/flex-basis */
+
+  min-width: 0;
+}
+
+.module-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px var(--shadow-medium);
+}
+
+.module-card h3 {
+  color: var(--text-dark);
+  font-size: 1.8em;
+  margin-top: 0;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.module-card p {
+  color: var(--secondary-color);
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex-grow: 1;
+  white-space: pre-wrap;
+}
+
+.tech-chips-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+/* Estilos para los chips individuales (si tienes un componente TechChip, su CSS iría aparte) */
+/* Si TechChip es solo un span o div, puedes estilizarlo aquí directamente */
+.tech-chip {
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: white; /* Color por defecto, sobrescrito por props en TechChip.jsx */
+    background-color: #5cb85c; /* Color por defecto, sobrescrito por props en TechChip.jsx */
+    white-space: nowrap; /* Evita que el texto del chip se rompa */
+}
+
+
+.module-link {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  align-self: center;
+  margin-top: auto;
+}
+
+.module-link:hover {
+  background-color: #0056b3;
+}
+
+/* --- Media Queries para Responsividad de la Tarjeta --- */
+
+@media (max-width: 768px) {
+.module-card {
+    /* CAMBIO CLAVE: Ahora la tarjeta ocupa el 100% del espacio disponible en el wrapper. */
+    /* El centrado lo hará el padding del .modules-carousel-wrapper en global.css */
+    flex-basis: 100%; /* ¡La tarjeta ocupa el 100% del espacio sin descontar el gap! */
+    /* El gap de 30px en .modules-carousel-content seguirá existiendo,
+       pero ahora actuará como un margen entre las tarjetas que están fuera de vista. */
+  }
+
+  .module-card h3 {
+    font-size: 1.8em;
+  }
+
+  .module-card p {
+    font-size: 1.1em;
+  }
+}

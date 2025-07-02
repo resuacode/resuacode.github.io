@@ -1,0 +1,227 @@
+/* src/styles/Header.css */
+
+/* Estilos de Cabecera (Header) */
+.header {
+  background-color: var(--background-dark); /* Usamos la variable global para consistencia */
+  color: var(--text-light);
+  padding: 20px 40px; /* Mantengo este padding para escritorio */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+  width: 100%;
+  box-sizing: border-box;
+  min-width: 0; /* Previene desbordamiento */
+  transition: transform 0.3s ease-in-out; /* Añade una transición para suavizar */
+    position: fixed; 
+    top: 0; /* Asegura que se quede arriba */
+    z-index: 1000; /* Asegura que esté por encima de todo */
+}
+
+/* Estado para ocultar el header */
+.header.hide-header {
+    transform: translateY(-100%); /* Desliza el header completamente hacia arriba */
+}
+
+/* Estado para mostrar el header (por defecto) */
+.header.show-header {
+    transform: translateY(0); /* Vuelve a su posición normal */
+}
+
+/* El nuevo contenedor para el título y el botón de hamburguesa */
+.header-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px; /* Mantener el ancho máximo */
+  width: 100%;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between; /* El título a la izq, el menú/hamburguesa a la der */
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  min-width: 0; /* Previene desbordamiento */
+}
+
+.header h1 {
+  margin: 0; /* Elimina margen inferior extra */
+  font-size: 2em; /* Tamaño de fuente inicial, se ajusta en media query */
+  color: var(--primary-color);
+  min-width: 0; /* Asegurar que el título pueda encogerse */
+}
+
+/* Estilos base para el menú de navegación */
+.nav-menu {
+  display: block; /* Por defecto visible en escritorio */
+  position: static; /* Asegura que no sea absoluto en desktop */
+  max-height: none; /* Asegura que no tenga límite de altura en desktop */
+  width: auto;
+    flex-grow: 1; 
+     display: flex; /* Esto es para que los nav-links se centren dentro del nav-menu */
+  justify-content: center; /* Centra los nav-links horizontalmente en desktop */
+}
+
+/* Estilos del botón de hamburguesa (oculto por defecto en escritorio) */
+.menu-toggle {
+  display: none; /* Oculto en escritorio */
+  background: none;
+  border: none;
+  font-size: 2em; /* Tamaño del icono */
+  color: var(--text-light); /* Color del icono */
+  cursor: pointer;
+  padding: 5px;
+  z-index: 20; /* Asegura que esté por encima del menú */
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap; /* Permitir que los enlaces se envuelvan si no hay espacio */
+  min-width: 0; /* Previene desbordamiento */
+}
+
+.nav-links li {
+  min-width: 0; /* Asegura que cada item pueda encogerse */
+}
+
+.nav-links li a {
+  color: var(--text-light);
+  font-size: 1.1em;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  padding-bottom: 5px;
+  position: relative;
+  white-space: nowrap; /* Evita que los enlaces se rompan en varias líneas */
+  text-decoration: none; /* Asegurar que no tienen subrayado por defecto */
+}
+
+.nav-links li a:hover {
+  color: var(--primary-color);
+  text-decoration: none; /* Eliminar subrayado en hover si se usa el ::after */
+}
+
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* Estilos para los iconos sociales (Font Awesome) */
+.nav-links li a .fab {
+  font-size: 1.5em; /* Ajusta el tamaño de los iconos */
+  vertical-align: middle; /* Alinea los iconos con el texto */
+  margin: 0 5px; /* Espacio alrededor de los iconos si hay texto cerca */
+}
+
+.nav-links li a[aria-label="GitHub"],.nav-links li a[aria-label="YouTube"]  {
+  color: var(--text-light);
+}
+
+.nav-links li a[aria-label="GitHub"]:hover, 
+.nav-links li a[aria-label="YouTube"]:hover {
+  color: var(--primary-color); /* Cambia el color al pasar el ratón */
+  text-decoration: none; /* Elimina subrayado en hover */
+}
+
+.nav-links li a[aria-label="GitHub"]:hover::after,
+.nav-links li a[aria-label="YouTube"]:hover::after {
+  width: 0; /* No subraya los iconos */
+}
+
+/* --- Media Queries --- */
+
+@media (max-width: 992px) {
+  .header {
+    padding: 15px 30px; /* Ajuste de padding del header en tabletas */
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    /* Aquí el header sigue siendo flex-direction: column para contener la fila superior y el menú */
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 10px; /* Padding reducido para móvil */
+    top: 0; /* Asegura que el header se quede en la parte superior */
+  }
+
+    /* La fila superior del header (título y botón de hamburguesa) */
+  .header-top-row {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    padding: 0 10px; /* Ajusta este padding si el padding del .header es 10px */
+    margin-bottom: 0; /* No debe haber margen inferior si el nav va debajo */
+  }
+
+  .header-content {
+    flex-direction: row; /* El contenido del header sigue siendo fila en móvil */
+    flex-wrap: nowrap; /* Evita que los elementos se envuelvan */
+    justify-content: space-between; /* Asegura espacio entre título y hamburguesa */
+  }
+
+  .header h1 {
+    font-size: 1.8em; /* Ajustar tamaño de fuente para móvil */
+  }
+
+  /* Mostrar el botón de hamburguesa en móvil */
+  .menu-toggle {
+    display: block; /* Muestra el botón */
+  }
+
+  /* Ocultar el menú de navegación por defecto en móvil */
+  .nav-menu {
+    top: 100%; /* Justo debajo del header */
+    left: 0;
+    width: 100%;
+    background-color: var(--background-dark); /* Fondo del menú desplegado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Para animar el alto */
+    max-height: 0; /* Oculto por defecto */
+    transition: max-height 0.4s ease-out; /* Animación de despliegue */
+    z-index: 15; /* Por debajo de la hamburguesa, pero por encima del contenido */
+        flex-grow: 0; 
+  }
+
+  /* Estado abierto del menú */
+  .nav-menu.is-open {
+    max-height: 400px; /* Altura suficiente para mostrar todos los enlaces */
+  }
+
+  .nav-links {
+    flex-direction: column; /* Menú en columna */
+    gap: 15px; /* Espacio entre los enlaces */
+    width: 100%;
+    align-items: center; /* Centra los enlaces */
+    padding: 20px 0; /* Padding interno del menú */
+  }
+
+  .nav-links li {
+    width: 100%; /* Ocupa todo el ancho */
+    text-align: center; /* Centra el texto del enlace */
+  }
+
+  .nav-links li a {
+    font-size: 1.0em;
+    display: block; /* Hace que el área del enlace sea mayor */
+    padding: 5px 0; /* Padding para cada enlace */
+  }
+
+  .nav-links li a .fab {
+    font-size: 1.8em; /* Iconos un poco más grandes en móvil */
+    margin: 0; /* Sin margen extra si están en su propia línea */
+  }
+}

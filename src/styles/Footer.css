@@ -1,0 +1,35 @@
+.footer {
+  background-color: #282c34; /* Mismo color que el header o uno similar */
+  color: #a0a0a0; /* Color de texto suave */
+  padding: 30px 20px;
+  text-align: center;
+  margin-top: 50px; /* Espacio por encima del footer */
+  border-top: 1px solid #3a3f47;
+}
+
+.footer-content p {
+  margin: 5px 0;
+  font-size: 0.95em;
+}
+
+.footer-links {
+  margin-top: 15px;
+}
+
+.footer-links a {
+  color: #61dafb;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 0.9em;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #21a1f1;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 20px 15px;
+  }
+}

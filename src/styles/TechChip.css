@@ -1,0 +1,23 @@
+.tech-chip {
+  display: inline-flex; /* Para que el texto y posible icono estén alineados */
+  align-items: center;
+  padding: 5px 12px;
+  border-radius: 20px; /* Bordes bien redondeados para el estilo de "chip" */
+  font-size: 0.85em; /* Tamaño de fuente un poco más pequeño */
+  font-weight: bold;
+  margin: 4px; /* Pequeño margen entre chips */
+  white-space: nowrap; /* Evita que el texto del chip se rompa en varias líneas */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Pequeña sombra para profundidad */
+  transition: transform 0.2s ease;
+}
+
+.tech-chip:hover {
+  transform: translateY(-2px); /* Efecto ligero al pasar el ratón */
+}
+
+.tech-chip-icon {
+  height: 1em; /* Ajusta el tamaño del icono al texto */
+  width: 1em;
+  margin-right: 5px; /* Espacio entre el icono y el texto */
+  vertical-align: middle; /* Alineación vertical */
+}
