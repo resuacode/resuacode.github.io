@@ -1,3 +1,5 @@
+/* src/styles/ProjectCard.css */
+
 .project-card {
   background-color: #ffffff;
   border: 1px solid #e0e0e0;
@@ -12,10 +14,9 @@
 }
 
 .project-card img {
-    max-width: 100%; /* Asegura que la imagen no se desborde */
-    height: auto;
-    display: block;
-    margin-bottom: 15px;
+  max-width: 100%; /* Asegura que la imagen no se desborde */
+  height: auto;
+  display: block;
 }
 
 .project-card:hover {
@@ -28,6 +29,7 @@
   height: 200px; /* Altura fija para las imágenes */
   overflow: hidden; /* Oculta cualquier parte de la imagen que se desborde */
   border-bottom: 1px solid #eee; /* Separador entre imagen y contenido */
+  margin-bottom: 25px; /* Espacio debajo de la imagen, empujando el contenido */
 }
 
 .project-image {
@@ -47,20 +49,70 @@
   color: #282c34;
   font-size: 1.8em;
   margin-top: 0;
-  margin-bottom: 15px;
+  margin-bottom: 10px; /* Espacio entre el título y la sección de tecnologías */
 }
+
+/* --- ESTILOS AJUSTADOS PARA LA SECCIÓN DE TECNOLOGÍAS --- */
+.technologies-section {
+  display: flex;
+  /* Eliminamos flex-wrap aquí para controlarlo en .tech-chips-container */
+  align-items: center; /* **Clave:** Alinea verticalmente el texto y el contenedor de chips */
+  margin-bottom: 15px; /* Espacio entre esta sección y la descripción */
+}
+
+.technologies-label {
+  font-weight: bold;
+  color: #333;
+  font-size: 0.9em; /* **AJUSTADO:** Texto un poco más pequeño */
+  margin: 0 8px 0 0; /* **AJUSTADO:** Margen a la derecha para separar del primer chip */
+  flex-shrink: 0; /* Evita que el texto se encoja */
+  white-space: nowrap; /* Evita que el texto "Tecnologías:" se rompa */
+}
+
+.tech-chips-container {
+  display: flex;
+  flex-wrap: wrap; /* **Clave:** Ahora las chips envuelven individualmente */
+  gap: 5px; /* Espacio entre los chips */
+  margin: 0; /* Asegurarse de que no tenga márgenes que empujen */
+  /* Nuevo: Permite que este contenedor de chips ocupe el espacio restante */
+  flex-grow: 1;
+}
+
+/* --- ESTILOS PARA LOS CHIPS INDIVIDUALES (DENTRO DE TechChip.jsx o aquí si se aplican directamente) --- */
+/* Esta es la clase que TechChip debería aplicar a su elemento raíz (ej. un <span> o <div>) */
+.tech-chip {
+    padding: 4px 10px; /* Menor padding para que sean más pequeñas */
+    border-radius: 15px;
+    font-size: 0.8em; /* Tamaño de fuente más pequeño */
+    white-space: nowrap;
+    display: inline-flex; /* Asegura que los chips se comporten como inline pero puedan usar flexbox */
+    align-items: center;
+    gap: 4px; /* Espacio entre icono y texto dentro del chip */
+    /* background-color y color vienen de estilos inline de React */
+}
+
+/* Asegúrate de que el icono dentro del chip (si lo hay) tenga un tamaño adecuado */
+.tech-chip img {
+    height: 0.9em; /* Más pequeño para el icono dentro del chip */
+    width: 0.9em;
+    margin-bottom: 0; /* Eliminar el margen de la regla general de img */
+}
+
+
+/* --- CONTINUACIÓN DE TUS ESTILOS EXISTENTES --- */
 
 .project-content p {
   color: #555;
   font-size: 1.1em;
   line-height: 1.6;
+  margin-top: 0; /* Asegura que no haya un margen superior extra */
   margin-bottom: 20px;
-  flex-grow: 1; /* Permite que la descripción crezca */
+  flex-grow: 1;
 }
 
 .project-links {
   display: flex;
-  gap: 15px; /* Espacio entre los botones */
+  gap: 15px;
   margin-top: auto; /* Empuja los enlaces hacia abajo */
 }
 
@@ -74,7 +126,7 @@
 }
 
 .github-link {
-  background-color: #333; /* Color para GitHub */
+  background-color: #333;
   color: white;
 }
 
@@ -83,7 +135,7 @@
 }
 
 .demo-link {
-  background-color: #007bff; /* Color para la demo */
+  background-color: #007bff;
   color: white;
 }
 
@@ -91,18 +143,10 @@
   background-color: #0056b3;
 }
 
-.tech-chips-container {
-  display: flex;
-  flex-wrap: wrap; /* Permite que los chips salten de línea si no caben */
-  gap: 5px; /* Espacio entre los chips */
-  margin-top: 15px;
-  margin-bottom: 20px; /* Espacio debajo de los chips */
-}
-
-/* Estilos para la cuadrícula de proyectos, similar a los módulos */
+/* Estilos para la cuadrícula de proyectos */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minminmax(300px, 1fr));
   gap: 30px;
   margin-top: 30px;
 }

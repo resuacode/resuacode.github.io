@@ -1,0 +1,127 @@
+/* src/styles/Projects.css */
+
+/* Contenedor de las chips de filtro */
+.filter-chips-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Espacio entre las chips */
+  justify-content: center; /* Centra las chips horizontalmente */
+  margin-top: 20px;
+  margin-bottom: 30px; /* Espacio entre las chips y el grid de proyectos */
+}
+/* Estilo base para cada chip (estado "desactivado" o por defecto) */
+.chip {
+  /* Mantén los colores definidos dinámicamente con `style` en React.
+     Estas propiedades actuarán como un fallback si `style` no se aplica,
+     o si quieres un color base común antes de la personalización. */
+  background-color: var(--secondary-color); /* Color por defecto (puede ser más sutil) */
+  color: var(--text-light);
+
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease, opacity 0.3s ease, filter 0.3s ease; /* ¡Añade opacity y filter a la transición! */
+  white-space: nowrap;
+  outline: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  /* Estilo para chips "desactivadas" */
+  opacity: 0.6; /* Menor opacidad cuando no están activas */
+  filter: grayscale(50%); /* Opcional: Desaturar un poco para dar aspecto de desactivado */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Borde sutil para chips desactivadas */
+}
+
+/* Estilo para las chips activas (seleccionadas) */
+.chip.active {
+  /* Los colores de `backgroundColor` y `color` se establecerán con `style` en React */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Una sombra más pronunciada */
+  transform: translateY(-2px);
+  opacity: 1; /* Opacidad completa cuando están activas */
+  filter: grayscale(0%); /* Sin desaturación cuando están activas */
+  border: 1px solid var(--primary-color); /* Borde más visible o con color primario */
+}
+
+/* Efecto hover para las chips (aplica a activas y desactivadas) */
+.chip:hover {
+  /* Los colores de `backgroundColor` y `color` se gestionan con el inline style,
+     por lo que el hover podría simplemente elevarlas y aplicar una sombra. */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Sombra al pasar el ratón */
+  opacity: 0.8; /* Ligeramente más opacas al pasar el ratón */
+  filter: grayscale(25%); /* Ligeramente menos desaturadas al pasar el ratón */
+}
+
+.chip.active:hover {
+  opacity: 1; /* Las chips activas se mantienen opacas al pasar el ratón */
+  filter: grayscale(0%); /* Las chips activas no se desaturan al pasar el ratón */
+}
+
+/* Botón para reiniciar filtros */
+.reset-filters-button {
+  display: block; /* Para que ocupe su propia línea */
+  margin: 20px auto 40px auto; /* Centrar y darle espacio */
+  padding: 10px 20px;
+  background-color: #dc3545; /* Un color rojo para "reiniciar" */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.reset-filters-button:hover {
+  background-color: #c82333; /* Rojo más oscuro en hover */
+}
+
+/* Estilos de las chips de tecnología dentro de las tarjetas de proyecto */
+.project-tech-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.project-tech-chip {
+  background-color: #e9ecef; /* Un color claro para las chips de proyecto */
+  color: var(--text-dark);
+  padding: 4px 8px;
+  border-radius: 15px;
+  font-size: 0.8em;
+  white-space: nowrap;
+  display: flex; /* Para las chips dentro de la tarjeta de proyecto */
+  align-items: center;
+  gap: 3px; /* Espacio entre icono y texto */
+}
+
+/* Asegúrate de que projects-grid y project-card ya están definidos en tu global.css o aquí */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.project-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 200px; /* Para que todas las tarjetas tengan una altura mínima */
+}
+
+/* Media Queries para responsividad si es necesario en Projects.css */
+@media (max-width: 768px) {
+  .chip {
+    font-size: 0.85em;
+    padding: 7px 12px;
+  }
+}

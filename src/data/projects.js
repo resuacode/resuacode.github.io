@@ -7,9 +7,9 @@ const projects = [
     demoLink: null, // Opcional: enlace a una demo en vivo
     image: '/images/triviaapp.png', // Opcional: ruta a una imagen dentro de la carpeta public
      technologies: [
-      { name: 'Android' },
-      { name: 'Kotlin' },
-        { name: 'Jetpack Compose' },
+      'Android',
+      'Kotlin',
+       'Jetpack Compose',
      ],
   },
   {
@@ -20,9 +20,9 @@ const projects = [
     demoLink: null, // Opcional: enlace a una demo en vivo
     image: null, // Opcional: ruta a una imagen dentro de la carpeta public
      technologies: [
-      { name: 'Android' },
-      { name: 'Kotlin' },
-        { name: 'Jetpack Compose' },
+      'Android',
+      'Kotlin',
+       'Jetpack Compose',
      ],
   },
   {
@@ -33,8 +33,8 @@ const projects = [
     demoLink: null, // Si no tienes demo, puedes poner null
     image: '/images/breakout.png',    // Si no tienes imagen, puedes poner null
      technologies: [
-      { name: 'Unity6' },
-      { name: 'C#' },
+      'Unity6',
+      'C#',
      ],
   },
    {
@@ -45,9 +45,9 @@ const projects = [
     demoLink: null, // Opcional: enlace a una demo en vivo
     image: null, // Opcional: ruta a una imagen dentro de la carpeta public
      technologies: [
-      { name: 'Android' },
-      { name: 'Kotlin' },
-        { name: 'Jetpack Compose' },
+      'Android',
+      'Kotlin',
+       'Jetpack Compose',
      ],
   },
   // Añade más proyectos aquí siguiendo el mismo formato

@@ -54,18 +54,6 @@
   justify-content: center;
 }
 
-/* Estilos para los chips individuales (si tienes un componente TechChip, su CSS iría aparte) */
-/* Si TechChip es solo un span o div, puedes estilizarlo aquí directamente */
-.tech-chip {
-    padding: 6px 10px;
-    border-radius: 5px;
-    font-size: 0.9em;
-    font-weight: bold;
-    color: white; /* Color por defecto, sobrescrito por props en TechChip.jsx */
-    background-color: #5cb85c; /* Color por defecto, sobrescrito por props en TechChip.jsx */
-    white-space: nowrap; /* Evita que el texto del chip se rompa */
-}
-
 
 .module-link {
   display: inline-block;

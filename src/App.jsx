@@ -4,10 +4,10 @@ import ModuleCard from './components/ModuleCard'; // Importa el componente Modul
 import ProjectCard from './components/ProjectCard'; // Importa el componente ProjectCard
 import YouTubeVideoCard from './components/YouTubeVideoCard'; // Importa el componente YouTubeVideoCard
 import Footer from './components/Footer'; // Importa el componente Footer
+import Projects from './components/Projects'; // Importa el componente Projects
 
 
 import modulesData from './data/modules'; // Importa los datos de los módulos
-import projectsData from './data/projects'; // Importa los datos de los proyectos
 import youtubeVideosData from './data/youtubeVideos'; // Importa los datos de los videos de YouTube
 
 import './styles/global.css'; 
@@ -57,7 +57,7 @@ function App() {
       carouselContentRef.current.style.transform = `translateX(-${offset}px)`;
     }
   }, [currentIndex, itemsPerPage, modulesData]); // Dependencias
-  
+
   const nextSlide = () => {
     const maxIndex = modulesData.length - itemsPerPage;
     setCurrentIndex(prevIndex => Math.min(prevIndex + itemsPerPage, maxIndex));
@@ -106,22 +106,8 @@ function App() {
         </section>
 
         {/* Aquí irán las otras secciones */}
-        <section id="projects">
-          <h2>Proyectos</h2>
-          <div className="projects-grid"> {/* Contenedor para la cuadrícula de proyectos */}
-            {projectsData.map(project => (
-              <ProjectCard
-                key={project.id}
-                title={project.title}
-                description={project.description}
-                githubLink={project.githubLink}
-                demoLink={project.demoLink}
-                image={project.image}
-                technologies={project.technologies} 
-              />
-            ))}
-          </div>
-        </section>
+        
+          <Projects /> {/* Renderiza el componente Projects que ya maneja los proyectos */}
 
        {/* Sección de Mi Canal de YouTube */}
         <section id="youtube">

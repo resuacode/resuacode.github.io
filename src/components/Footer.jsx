@@ -7,8 +7,8 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="footer-content">
-        <p>&copy; {currentYear} Daniel Resúa. Todos los derechos reservados.</p>
-        <p>Desarrollado Vite y React.</p>
+        <p>&copy; {currentYear} Daniel Resúa.</p>
+        <p>Desarrollado con Vite y React.</p>
         {/* Para añadir enlaces adicionales aquí, por ejemplo, a una política de privacidad */}
         {/* <div className="footer-links">
           <a href="/politica-privacidad">Política de Privacidad</a>

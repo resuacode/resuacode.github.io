@@ -5,7 +5,6 @@
   border-radius: 20px; /* Bordes bien redondeados para el estilo de "chip" */
   font-size: 0.85em; /* Tamaño de fuente un poco más pequeño */
   font-weight: bold;
-  margin: 4px; /* Pequeño margen entre chips */
   white-space: nowrap; /* Evita que el texto del chip se rompa en varias líneas */
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Pequeña sombra para profundidad */
   transition: transform 0.2s ease;
