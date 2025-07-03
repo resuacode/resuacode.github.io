@@ -50,6 +50,18 @@ const projects = [
        'Jetpack Compose',
      ],
   },
+  {
+    id: 5,
+    title: 'App EleccionesEscalera',
+    description: 'Proyecto de ejemplo Android con Java que ejemplifica el uso de un Fragment a modo de componente y un pequeño login. <br/>Este proyecto se basa en la idea de votar al presidente de la comunidad de vecinos de los archiconocidos candidatos de la serie "Aquí no hay quien viva". Los datos de los candidatos, sus partidos y demás se precargan en una pequeña base de datos en la que también se precargan los datos de los usuarios que pueden acceder para votar.',
+    githubLink: 'https://github.com/resuacode/EleccionesEscalera',
+    demoLink: null, // Opcional: enlace a una demo en vivo
+    image: null, // Opcional: ruta a una imagen dentro de la carpeta public
+     technologies: [
+      'Android',
+      'Java',
+     ],
+  },
   // Añade más proyectos aquí siguiendo el mismo formato
 ];
 
