@@ -1,0 +1,36 @@
+# .github/workflows/deploy.yml
+
+name: Deploy Homepage to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master # Despliega cuando se haga push a la rama master
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest # Ejecuta el trabajo en un entorno Linux
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4 # Clona tu repositorio
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # Puedes ajustar la versión de Node.js si lo necesitas (ej. 18, 22)
+          cache: 'npm' # Habilita el caché de npm para instalaciones más rápidas
+
+      - name: Install dependencies
+        run: npm ci # 'npm ci' es mejor que 'npm install' para CI/CD
+
+      - name: Build project
+        run: npm run build # Ejecuta tu script de construcción de Vite
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3 # Acción de terceros para desplegar en gh-pages
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }} # Token de GitHub proporcionado automáticamente
+          publish_dir: ./dist # La carpeta que Vite genera al construir
+          # Personaliza la rama de despliegue si no es 'gh-pages'
+          # publish_branch: gh-pages
