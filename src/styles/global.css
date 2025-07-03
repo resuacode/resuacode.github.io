@@ -233,7 +233,7 @@ a:hover {
 
 @media (max-width: 768px) {
   .main-content {
-    padding: 0 10px; /* Aún menos padding en móviles */
+    padding: 50px 10px; /* Aún menos padding en móviles */
     margin: 10px auto; /* Reducir margen superior/inferior */
   }
 

@@ -1,7 +1,7 @@
 import React, { useState, useEffect,useRef  } from 'react'; // Importa useState y useEffect
 import Header from './components/Header'; 
+import About from './components/About'; // Importa el componente About
 import ModuleCard from './components/ModuleCard'; // Importa el componente ModuleCard
-import ProjectCard from './components/ProjectCard'; // Importa el componente ProjectCard
 import YouTubeVideoCard from './components/YouTubeVideoCard'; // Importa el componente YouTubeVideoCard
 import Footer from './components/Footer'; // Importa el componente Footer
 import Projects from './components/Projects'; // Importa el componente Projects
@@ -76,6 +76,7 @@ function App() {
     <div className="app-container">
       <Header />
       <main className="main-content">
+        <About /> {/* Renderiza el componente About */}
         <section id="modules">
           <h2>Módulos de Formación</h2>
           <div className="carousel-container">
@@ -106,7 +107,7 @@ function App() {
         </section>
 
         {/* Aquí irán las otras secciones */}
-        
+
           <Projects /> {/* Renderiza el componente Projects que ya maneja los proyectos */}
 
        {/* Sección de Mi Canal de YouTube */}

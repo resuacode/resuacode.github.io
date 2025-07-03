@@ -74,8 +74,7 @@
   flex-wrap: wrap; /* **Clave:** Ahora las chips envuelven individualmente */
   gap: 5px; /* Espacio entre los chips */
   margin: 0; /* Asegurarse de que no tenga márgenes que empujen */
-  /* Nuevo: Permite que este contenedor de chips ocupe el espacio restante */
-  flex-grow: 1;
+
 }
 
 /* --- ESTILOS PARA LOS CHIPS INDIVIDUALES (DENTRO DE TechChip.jsx o aquí si se aplican directamente) --- */

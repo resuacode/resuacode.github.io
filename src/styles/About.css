@@ -1,0 +1,93 @@
+/* src/styles/About.css */
+
+.about-section {
+  display: flex; /* Usamos flexbox para alinear el texto y la imagen */
+  flex-direction: row; /* Por defecto, el texto a la izquierda, la imagen a la derecha */
+  align-items: center; /* Centra verticalmente el contenido */
+  gap: 50px; /* Espacio entre el texto y la imagen */
+  padding: 60px 0; /* Padding superior e inferior para la sección */
+  max-width: 1200px; /* Ancho máximo de la sección para evitar que se estire demasiado */
+  margin: 0 auto; /* Centra la sección en la página */
+}
+
+.about-content {
+  flex: 2; /* El texto ocupará 2 partes del espacio disponible */
+  padding-right: 20px; /* Espacio extra a la derecha del texto */
+}
+
+.about-content h2 {
+  font-size: 2.8em;
+  color: var(--text-dark); /* Usa tus variables CSS para consistencia */
+  margin-bottom: 25px;
+  text-align: left; /* Alinea el título a la izquierda */
+}
+
+.about-content p {
+  font-size: 1.15em;
+  line-height: 1.8;
+  color: var(--text-medium); /* Usa tus variables CSS */
+  margin-bottom: 15px; /* Espacio entre párrafos */
+}
+
+.about-content p strong {
+  color: var(--primary-color); /* Resalta palabras clave con tu color primario */
+}
+
+.about-image-container {
+  flex: 1; /* La imagen ocupará 1 parte del espacio disponible */
+  display: flex;
+  justify-content: center; /* Centra la imagen si es más pequeña que su contenedor */
+  align-items: center;
+}
+
+.profile-image {
+  width: 300px; /* Ajusta el tamaño de tu imagen */
+  height: 300px; /* Debe ser igual al ancho para un círculo perfecto */
+  border-radius: 50%; /* ¡Esto hace la imagen redonda! */
+  object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+  border: 2px solid var(--primary-color); /* Borde alrededor de la foto */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Sombra para darle profundidad */
+  transition: transform 0.3s ease; /* Efecto suave al hacer hover */
+}
+
+.profile-image:hover {
+  transform: scale(1.03); /* Ligeramente más grande al pasar el ratón */
+}
+
+/* --- Media Queries para Responsividad --- */
+@media (max-width: 992px) {
+  .about-section {
+    flex-direction: column; /* Apila el texto y la imagen en pantallas más pequeñas */
+    gap: 30px;
+    padding: 40px 20px; /* Más padding horizontal en móviles */
+  }
+
+  .about-content {
+    padding-right: 0; /* Elimina el padding derecho en móviles */
+    text-align: center; /* Centra el texto en móviles */
+  }
+
+  .about-content h2 {
+    text-align: center; /* Centra el título en móviles */
+    font-size: 2.5em;
+  }
+
+  .about-image-container {
+    order: -1; /* Mueve la imagen encima del texto en móviles */
+    margin-bottom: 20px; /* Espacio debajo de la imagen */
+  }
+
+  .profile-image {
+    width: 200px; /* Tamaño de imagen más pequeño en móviles */
+    height: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-content h2 {
+    font-size: 2em;
+  }
+  .about-content p {
+    font-size: 1em;
+  }
+}

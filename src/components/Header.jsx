@@ -17,7 +17,6 @@ const Header = () => {
   // Efecto para controlar la visibilidad del header en scroll
   useEffect(() => {
     const handleScroll = () => {
-      // Solo aplicamos este comportamiento en móviles (cuando el menú de hamburguesa está activo)
       // Podemos basarnos en el ancho de la ventana o en una clase CSS que se active en móvil
       // Para este ejemplo, supondremos que es un comportamiento solo móvil.
       // Puedes refinar esto si necesitas un breakpoint exacto.
@@ -45,7 +44,7 @@ const Header = () => {
     <header className={`header ${showHeader ? 'show-header' : 'hide-header'}`}>
       {/* Contenido principal del header (título y botón de hamburguesa) */}
       <div className="header-top-row"> {/* NUEVO DIV para la fila superior */}
-        <h1>Daniel Resúa</h1> 
+        <h1>@ResuaCode</h1> 
         {/* Botón de hamburguesa para móvil */}
         <button className="menu-toggle" onClick={toggleMenu} aria-label="Toggle menu">
           <i className="fas fa-bars"></i>
