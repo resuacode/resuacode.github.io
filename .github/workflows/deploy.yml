@@ -34,4 +34,3 @@ jobs:
           publish_dir: ./dist # La carpeta que Vite genera al construir
           # Personaliza la rama de despliegue si no es 'gh-pages'
           # publish_branch: gh-pages
-          
