@@ -5,6 +5,7 @@ import ModuleCard from './components/ModuleCard'; // Importa el componente Modul
 import YouTubeVideoCard from './components/YouTubeVideoCard'; // Importa el componente YouTubeVideoCard
 import Footer from './components/Footer'; // Importa el componente Footer
 import Projects from './components/Projects'; // Importa el componente Projects
+import Contact from './components/Contact'; // Importa el componente Contact
 
 
 import modulesData from './data/modules'; // Importa los datos de los módulos
@@ -130,6 +131,8 @@ function App() {
             </a>
           </p>
         </section>
+        {/* Sección de Contacto */}
+        <Contact /> {/* Renderiza el componente Contact que ya maneja el formulario de contacto */}
       </main>
       <Footer />
     </div>

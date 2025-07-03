@@ -63,7 +63,7 @@ const Projects = () => {
         <p className="projects-description">
           Aquí encontrarás una selección de proyectos desarrollados en clases impartidas de diferentes módulos y ciclos de formación. 
           Cada proyecto está diseñado para aplicar los conocimientos adquiridos en el aula, utilizando diversas tecnologías y herramientas. 
-          <br/>Puedes filtrar los proyectos por tecnología para encontrar aquellos que más te interesen pulsando sobre ellas:
+          <br/>Puedes <strong>filtrar los proyectos por tecnología</strong> para encontrar aquellos que más te interesen pulsando sobre ellas:
         </p>
       {/* Contenedor de Chips de Filtro (Botones) */}
       <div className="filter-chips-container">

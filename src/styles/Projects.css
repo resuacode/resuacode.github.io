@@ -1,5 +1,20 @@
 /* src/styles/Projects.css */
 
+.projects-description {
+    font-size: 1.15em;
+  line-height: 1.8;
+  color: var(--text-medium); /* Usa tus variables CSS */
+  margin-bottom: 15px; /* Espacio entre párrafos */
+  max-width: 1000px; /* Ancho máximo para el párrafo descriptivo */
+  text-align: center; /* Centra el texto */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.projects-description strong {
+  color: var(--primary-color); /* Resalta palabras clave con tu color primario */
+}
+
 /* Contenedor de las chips de filtro */
 .filter-chips-container {
   display: flex;
@@ -9,6 +24,7 @@
   margin-top: 20px;
   margin-bottom: 30px; /* Espacio entre las chips y el grid de proyectos */
 }
+
 /* Estilo base para cada chip (estado "desactivado" o por defecto) */
 .chip {
   /* Mantén los colores definidos dinámicamente con `style` en React.
@@ -120,6 +136,11 @@
 
 /* Media Queries para responsividad si es necesario en Projects.css */
 @media (max-width: 768px) {
+    .projects-description {
+        font-size: 1em; /* Reduce el tamaño del texto en pantallas pequeñas */
+        margin-bottom: 10px; /* Menos espacio entre párrafos */
+    }
+
   .chip {
     font-size: 0.85em;
     padding: 7px 12px;
