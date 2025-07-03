@@ -5,7 +5,7 @@ const projects = [
     description: 'Una aplicación Android realizada en Kotlin y Jetpack Compose que se conecta a una API pública llamada TriviaAPI para generar un juego tipo Trivial de preguntas y respuestas usando Retrofit.<br/> Utilizamos también inyección de dependencias manuales para la conexión con la API y también Room para almacenar las partidas y un archivo de preferencias para el mejor Record en porcentaje de aciertos.',
     githubLink: 'https://github.com/resuacode/TriviaApp', // Tu repo de GitHub
     demoLink: null, // Opcional: enlace a una demo en vivo
-    image: '/images/triviaapp.png', // Opcional: ruta a una imagen dentro de la carpeta public
+    image: './images/triviaapp.png', // Opcional: ruta a una imagen dentro de la carpeta public
      technologies: [
       'Android',
       'Kotlin',
@@ -31,7 +31,7 @@ const projects = [
     description: 'Una versión del clásico juego Breakout, desarrollado en Unity6 con C#. <br/> Este proyecto incluye la implementación de físicas, colisiones y un sistema de puntuación. Es un excelente ejemplo de cómo crear un juego 2D simple pero entretenido.',
     githubLink: 'https://github.com/resuacode/BreakoutUnity6',
     demoLink: null, // Si no tienes demo, puedes poner null
-    image: '/images/breakout.png',    // Si no tienes imagen, puedes poner null
+    image: './images/breakout.png',    // Si no tienes imagen, puedes poner null
      technologies: [
       'Unity6',
       'C#',
