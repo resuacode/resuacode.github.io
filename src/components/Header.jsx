@@ -56,8 +56,8 @@ const Header = () => {
       <nav className={`nav-menu ${isOpen ? 'is-open' : ''}`}>
         <ul className="nav-links">
           <li><a href="#about" onClick={() => setIsOpen(false)}>Sobre mí</a></li>
-          <li><a href="#projects" onClick={() => setIsOpen(false)}>Proyectos</a></li>
           <li><a href="#modules" onClick={() => setIsOpen(false)}>Módulos</a></li>
+          <li><a href="#projects" onClick={() => setIsOpen(false)}>Proyectos</a></li>
           <li><a href="#contact" onClick={() => setIsOpen(false)}>Contacto</a></li>
           <li>
             <a href="https://github.com/resuacode" target="_blank" rel="noopener noreferrer" aria-label="GitHub" onClick={() => setIsOpen(false)}>
