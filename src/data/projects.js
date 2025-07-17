@@ -73,6 +73,7 @@ const projects = [
       'React',
       'JavaScript',
       'Node.js',
+      'Vite',
      ],
   },
   {
@@ -84,6 +85,7 @@ const projects = [
     image: './images/rescetario-app.png', // Opcional: ruta a una imagen dentro de la carpeta public
      technologies: [
       'React',
+      'Vite',
       'JavaScript',
       'Node.js',
       'Express',
