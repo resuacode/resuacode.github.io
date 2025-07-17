@@ -147,6 +147,10 @@ const TECHNOLOGIES_CONFIG = {
     backgroundColor: '#9b4993', // Morado de C#
     icon: CSharpIcon,
   },
+  'Express': {
+    color: '#FFFFFF',
+    backgroundColor: '#000000', // Negro de Express
+  }
 };
 
 export default TECHNOLOGIES_CONFIG;
