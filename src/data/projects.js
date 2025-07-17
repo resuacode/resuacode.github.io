@@ -62,6 +62,34 @@ const projects = [
       'Java',
      ],
   },
+  {
+    id: 6,
+    title: 'Homepage de Resuacode',
+    description: 'Página web personal creada con Vite y React. <br/> Este proyecto es un ejemplo de cómo crear una página web moderna y rápida utilizando las últimas tecnologías de desarrollo web. <br/> Incluye un diseño responsivo, optimización para SEO y una estructura clara y fácil de navegar.',
+    githubLink: 'https://github.com/resuacode/resuacode.github.io',
+    demoLink: 'https://resuacode.es', // Opcional: enlace a una demo en vivo
+    image: null, // Opcional: ruta a una imagen dentro de la carpeta public
+     technologies: [
+      'React',
+      'JavaScript',
+      'Node.js',
+     ],
+  },
+  {
+    id: 7,
+    title: 'Rescetario App - Webapp de Recetas',
+    description: 'Proyecto de una aplicación web de recetas, dónde los usuarios pueden buscar recetas, ver detalles y añadir sus propias recetas. <br/> Utiliza React para el frontend y una API RESTful para la gestión de datos.  <br/> Incluye funcionalidades como autenticación de usuarios, búsqueda avanzada y filtrado de recetas.  <br/> Este proyecto es ideal para aprender sobre el desarrollo de aplicaciones web modernas.',
+    githubLink: 'https://github.com/resuacode/recetas-app',
+    demoLink: 'https://rescetario.resuacode.es', // Opcional: enlace a una demo en vivo
+    image: './images/rescetario-app.png', // Opcional: ruta a una imagen dentro de la carpeta public
+     technologies: [
+      'React',
+      'JavaScript',
+      'Node.js',
+      'Express',
+      'MongoDB',
+     ],
+  },
   // Añade más proyectos aquí siguiendo el mismo formato
 ];
 
