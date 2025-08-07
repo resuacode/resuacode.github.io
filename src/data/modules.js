@@ -26,14 +26,14 @@ const modules = [
     id: 3,
     title: 'Programación de Servicios y Procesos',
     description: 'En proceso de desarrollo...',
-    link: null, // Enlace aún no disponible
+    link: 'http://resuacode.es/psp/',
     technologies: [ ], 
     },
     {
     id: 4,
     title: 'Seguridad y Alta Disponibilidad',
     description: 'En proceso de desarrollo...',
-    link: null, // Enlace aún no disponible
+    link: 'http://resuacode.es/sad/', 
     technologies: [
       
     ], 
@@ -42,7 +42,7 @@ const modules = [
     id: 5,
     title: 'Seguridad Informática',
     description: 'En proceso de desarrollo...',
-    link: null, // Enlace aún no disponible
+    link: 'http://resuacode.es/si-smr/', 
     technologies: [ ], 
     },
 ];
