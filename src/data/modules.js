@@ -25,23 +25,23 @@ const modules = [
     {
     id: 3,
     title: 'Programación de Servicios y Procesos',
-    description: 'En proceso de desarrollo...',
+    description: 'Contenido sobre programación de servicios y procesos, incluyendo el uso de APIs y programación concurrente y distribuida. Incluye ejemplos prácticos y recursos para aprender.',
     link: 'http://resuacode.es/psp/',
     technologies: [ ], 
     },
     {
     id: 4,
     title: 'Seguridad y Alta Disponibilidad',
-    description: 'En proceso de desarrollo...',
+    description: 'Contenido sobre seguridad en aplicaciones y sistemas, incluyendo técnicas de protección de datos, autenticación y autorización, y diseño de sistemas resilientes. Incluye ejemplos prácticos y recursos para aprender.',
     link: 'http://resuacode.es/sad/', 
     technologies: [
-      
+
     ], 
     },
     {
     id: 5,
     title: 'Seguridad Informática',
-    description: 'En proceso de desarrollo...',
+    description: 'Contenido sobre fundamentos de seguridad informática, incluyendo criptografía, redes seguras y protección contra amenazas. Incluye ejercicios prácticos y recursos para aprender.',
     link: 'http://resuacode.es/si-smr/', 
     technologies: [ ], 
     },
