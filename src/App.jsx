@@ -126,7 +126,7 @@ function App() {
           </div>
            {/* Enlace directo al canal */}
           <p style={{ textAlign: 'center', marginBottom: '30px' }}>
-            <a href="https://www.youtube.com/your-channel-link" target="_blank" rel="noopener noreferrer" className="youtube-channel-link">
+            <a href="https://www.youtube.com/@resuacode" target="_blank" rel="noopener noreferrer" className="youtube-channel-link">
               Visita el canal
             </a>
           </p>
