@@ -33,7 +33,7 @@ const projects = [
     demoLink: null, // Si no tienes demo, puedes poner null
     image: './images/breakout.png',    // Si no tienes imagen, puedes poner null
      technologies: [
-      'Unity6',
+      'Unity',
       'C#',
      ],
   },
@@ -90,6 +90,42 @@ const projects = [
       'Node.js',
       'Express',
       'MongoDB',
+     ],
+  },
+  {
+    id: 8,
+    title: 'Pong en Unity - El clásico de los clásicos',
+    description: 'Una versión del clásico juego Pong, desarrollado en Unity con C#. <br/> Este proyecto incluye la implementación de físicas básicas, colisiones y un sistema de puntuación sencillo. Es un excelente ejemplo para iniciarse en el desarrollo de juegos 2D simples.',
+    githubLink: 'https://github.com/resuacode/PongPMUL',
+    demoLink: null, // Si no tienes demo, puedes poner null
+    image: './images/pong.png',    // Si no tienes imagen, puedes poner null
+     technologies: [
+      'Unity',
+      'C#',
+     ],
+  },
+  {
+    id: 9,
+    title: 'Flappy Bird en Unity - El típico infinite runner',
+    description: 'Una versión del clásico juego Flappy Bird, desarrollado en Unity con C#. <br/> Este proyecto nos sirve para ver un ejemplo sencillo de efecto parallax y una introducción al object pooling.',
+    githubLink: 'https://github.com/resuacode/FlappyBirdPMUL',
+    demoLink: null, // Si no tienes demo, puedes poner null
+    image: './images/flappy-bird.png',    // Si no tienes imagen, puedes poner null
+     technologies: [
+      'Unity',
+      'C#',
+     ],
+  },
+  {
+    id: 10,
+    title: 'Naves en Unity6 - Juego de naves y marcianetes',
+    description: 'Un juego de controlar una nave y disparar a alienígenas, clásico pero efectivo para aprender. <br/> Siguiendo con el 2D en Unity aplicamos lo aprendido en proyectos anteriores como el object pooling para la generación de puntos de spawn de diferentes enemigos y power-ups.',
+    githubLink: 'https://github.com/resuacode/NavesPMUL',
+    demoLink: null, // Si no tienes demo, puedes poner null
+    image: './images/naves.png',    // Si no tienes imagen, puedes poner null
+     technologies: [
+      'Unity',
+      'C#',
      ],
   },
   // Añade más proyectos aquí siguiendo el mismo formato

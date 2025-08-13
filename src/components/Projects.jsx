@@ -9,6 +9,27 @@ const Projects = () => {
   const [selectedTechnologies, setSelectedTechnologies] = useState(new Set());
   const [filteredProjects, setFilteredProjects] = useState(projectsData);
   const [allTechnologies, setAllTechnologies] = useState([]);
+  const [visibleProjectsCount, setVisibleProjectsCount] = useState(6);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  // Efecto para detectar el tamaño de pantalla y ajustar el número inicial de proyectos
+  useEffect(() => {
+    const handleResize = () => {
+      const isSmall = window.innerWidth <= 768;
+      setIsSmallScreen(isSmall);
+      // Resetear la cantidad visible cuando cambia el tamaño de pantalla
+      setVisibleProjectsCount(isSmall ? 3 : 6);
+    };
+
+    // Ejecutar al montar el componente
+    handleResize();
+    
+    // Añadir listener para cambios de tamaño
+    window.addEventListener('resize', handleResize);
+    
+    // Limpiar listener al desmontar
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   // Efecto para recolectar todas las tecnologías únicas de los proyectos
   useEffect(() => {
@@ -39,7 +60,9 @@ const Projects = () => {
       );
       setFilteredProjects(newFilteredProjects);
     }
-  }, [selectedTechnologies]);
+    // Resetear la cantidad visible cuando cambian los filtros
+    setVisibleProjectsCount(isSmallScreen ? 3 : 6);
+  }, [selectedTechnologies, isSmallScreen]);
 
   // Manejador para cuando se hace clic en una chip
   const handleChipClick = (techName) => {
@@ -56,6 +79,16 @@ const Projects = () => {
   const handleResetFilters = () => {
     setSelectedTechnologies(new Set());
   };
+
+  // Manejador para mostrar más proyectos
+  const handleShowMore = () => {
+    const increment = 3;
+    setVisibleProjectsCount(prev => prev + increment);
+  };
+
+  // Obtener los proyectos que se van a mostrar
+  const visibleProjects = filteredProjects.slice(0, visibleProjectsCount);
+  const hasMoreProjects = filteredProjects.length > visibleProjectsCount;
 
   return (
     <section id="projects">
@@ -98,8 +131,8 @@ const Projects = () => {
 
       {/* Grid de Proyectos */}
       <div className="projects-grid">
-        {filteredProjects.length > 0 ? (
-          filteredProjects.map(project => {
+        {visibleProjects.length > 0 ? (
+          visibleProjects.map(project => {
             // Prepara el array de tecnologías para ProjectCard
             const projectTechnologiesForCard = project.technologies
               .filter(techName => TECHNOLOGIES_CONFIG.hasOwnProperty(techName)) // Filtra solo las que tienen configuración
@@ -125,6 +158,15 @@ const Projects = () => {
           <p>No se encontraron proyectos con las tecnologías seleccionadas.</p>
         )}
       </div>
+
+      {/* Botón Mostrar Más */}
+      {hasMoreProjects && (
+        <div className="show-more-container">
+          <button className="show-more-button" onClick={handleShowMore}>
+            Mostrar más ({Math.min(3, filteredProjects.length - visibleProjectsCount)} proyectos)
+          </button>
+        </div>
+      )}
     </section>
   );
 };

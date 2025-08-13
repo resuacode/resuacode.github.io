@@ -18,7 +18,7 @@ const modules = [
       { name: 'Android' },
       { name: 'Kotlin' },
         { name: 'Jetpack Compose' },
-      { name: 'Unity6'},
+      { name: 'Unity'},
       { name: 'C#' },
     ], 
     },
@@ -27,7 +27,7 @@ const modules = [
     title: 'Programación de Servicios y Procesos',
     description: 'Contenido sobre programación de servicios y procesos, incluyendo el uso de APIs y programación concurrente y distribuida. Incluye ejemplos prácticos y recursos para aprender.',
     link: 'http://resuacode.es/psp/',
-    technologies: [ ], 
+    technologies: [ 'Java' ], 
     },
     {
     id: 4,

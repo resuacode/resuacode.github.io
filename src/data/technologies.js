@@ -137,7 +137,7 @@ const TECHNOLOGIES_CONFIG = {
     backgroundColor: '#3c4ec7', // Azul de Jetpack Compose
     icon: JetpackComposeIcon, 
     },
-  'Unity6': {
+  'Unity': {
     color: '#FFFFFF',
     backgroundColor: '#000000', // Negro de Unity
     icon: UnityIcon,
