@@ -17,7 +17,7 @@ const modules = [
     technologies: [
       { name: 'Android' },
       { name: 'Kotlin' },
-        { name: 'Jetpack Compose' },
+      { name: 'Jetpack Compose' },
       { name: 'Unity'},
       { name: 'C#' },
     ], 
@@ -28,7 +28,10 @@ const modules = [
     description: 'Contenido sobre programación de servicios y procesos, incluyendo el uso de APIs y programación concurrente y distribuida. Incluye ejemplos prácticos y recursos para aprender.',
     link: 'https://resuacode.es/psp/',
     technologies: [ 
-       { name: 'Java' },
+      { name: 'Kotlin' },
+      { name: 'Android' },
+      { name: 'Jetpack Compose' },
+      { name: 'Java' },
      ], 
     },
     {
@@ -37,15 +40,24 @@ const modules = [
     description: 'Contenido sobre seguridad en aplicaciones y sistemas, incluyendo técnicas de protección de datos, autenticación y autorización, y diseño de sistemas resilientes. Incluye ejemplos prácticos y recursos para aprender.',
     link: 'https://resuacode.es/sad/', 
     technologies: [
-
-    ], 
+      { name: 'VirtualBox' },
+      { name: 'Vagrant' },
+      { name: 'AWS' },
+      { name: 'Docker' },
+      { name: 'Windows' },
+      { name: 'Linux' },
+     ], 
     },
     {
     id: 5,
     title: 'Seguridad Informática',
     description: 'Contenido sobre fundamentos de seguridad informática, incluyendo criptografía, redes seguras y protección contra amenazas. Incluye ejercicios prácticos y recursos para aprender.',
     link: 'https://resuacode.es/si-smr/', 
-    technologies: [ ], 
+    technologies: [ 
+      { name: 'VirtualBox' }
+      { name: 'Windows' },
+      { name: 'Linux' },
+    ], 
     },
 ];
 

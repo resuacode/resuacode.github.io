@@ -150,6 +150,22 @@ const TECHNOLOGIES_CONFIG = {
   'Express': {
     color: '#FFFFFF',
     backgroundColor: '#000000', // Negro de Express
+  },
+  'VirtualBox': {
+    color: '#1e7786',
+    backgroundColor: '#e49830' // Fondo naranja para VirtualBox
+  },
+  'Windows': {
+    color: '#ffffff',
+    backgroundColor: '#0e88db' // Fondo azul para Windows
+  },
+  'Linux': {
+    color: '#e4b01a',
+    backgroundColor: '#070607' // Fondo negro para Linux
+  },
+  'Vagrant': {
+    color: '#ffffff',
+    backgroundColor: '#1463fb' // Fondo azul para Vagrant
   }
 };
 
