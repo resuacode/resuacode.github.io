@@ -54,7 +54,7 @@ const modules = [
     description: 'Contenido sobre fundamentos de seguridad informática, incluyendo criptografía, redes seguras y protección contra amenazas. Incluye ejercicios prácticos y recursos para aprender.',
     link: 'https://resuacode.es/si-smr/', 
     technologies: [ 
-      { name: 'VirtualBox' }
+      { name: 'VirtualBox' },
       { name: 'Windows' },
       { name: 'Linux' },
     ], 
