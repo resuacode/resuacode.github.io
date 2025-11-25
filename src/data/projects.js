@@ -128,6 +128,18 @@ const projects = [
       'C#',
      ],
   },
+  {
+    id: 11,
+    title: 'Mar de Insultos - Juego de insultos aleatorios',
+    description: 'Mar de Insultos es un juego 2D desarrollado en Unity 6.0 que recrea el clásico duelo de insultos de Monkey Island. <br/> Combina humor, agilidad mental y estrategia verbal en una experiencia ligera y divertida. ',
+    githubLink: 'https://gitlab.com/dresua/prog2d-pec1',
+    demoLink: 'https://play.unity.com/en/games/e2e57ee4-5eeb-4a5c-bf0f-b75ba1ee8dd8/mar-de-insultos', // Si no tienes demo, puedes poner null
+    image: './images/mar_de_insultos.png',    // Si no tienes imagen, puedes poner null
+     technologies: [
+      'Unity',
+      'C#',
+     ],
+  },
   // Añade más proyectos aquí siguiendo el mismo formato
 ];
 
