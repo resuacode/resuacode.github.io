@@ -140,6 +140,18 @@ const projects = [
       'C#',
      ],
   },
+    {
+    id: 12,
+    title: 'New Super Chario - Juego de plataformas 2D',
+    description: 'New Super Chario World es un proyecto educativo que recrea las mecánicas clásicas del icónico Super Mario Bros. Desarrollado en Unity con C#, este juego de plataformas 2D implementa sistemas de enemigos inteligentes, power-ups, físicas de salto precisas, y una gestión completa del flujo de juego desde el menú principal hasta la pantalla de fin de nivel.<br/> El proyecto sirve como ejemplo práctico de implementación de patrones de diseño en videojuegos, gestión de estados, sistemas de puntuación, y cinemáticas secuenciales. ',
+    githubLink: 'https://gitlab.com/dresua/prog2d-pec2',
+    demoLink: 'https://play.unity.com/en/games/d9b3991e-fea1-43a5-a755-d1acfb59c4e1/new-super-chario-world', // Si no tienes demo, puedes poner null
+    image: './images/super_chario.png',    // Si no tienes imagen, puedes poner null
+     technologies: [
+      'Unity',
+      'C#',
+     ],
+  },
   // Añade más proyectos aquí siguiendo el mismo formato
 ];
 
