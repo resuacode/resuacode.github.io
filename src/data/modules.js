@@ -3,7 +3,7 @@ const modules = [
     id: 1,
     title: 'Programación',
     description: 'Contenido sobre fundamentos de programación, desde lo básico hasta conceptos de programación orientada a objetos. Incluye ejercicios prácticos y proyectos.',
-    link: 'https://resuacode-pro.vercel.app/',
+    link: 'https://resuacode.es/pro-ds/',
     technologies: [
       { name: 'Python'},
       { name: 'Java' },
@@ -13,7 +13,7 @@ const modules = [
     id: 2,
     title: 'Programación Multimedia y Dispositivos Móviles',
     description: 'Programación de aplicaciones Android usando Kotlin y Jetpack Compose y programación de videojuegos con Unity y C#. Incluye proyectos prácticos y recursos para aprender.',
-    link: 'https://resuacode-pmdm.vercel.app/',
+    link: 'https://resuacode.es/pmdm-ds/',
     technologies: [
       { name: 'Android' },
       { name: 'Kotlin' },
