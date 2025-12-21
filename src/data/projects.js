@@ -152,6 +152,18 @@ const projects = [
       'C#',
      ],
   },
+      {
+    id: 13,
+    title: 'The Tanksss - Juego de artillería 2D',
+    description: 'Este proyecto consiste en el desarrollo de un videojuego de estrategia por turnos en 2D inspirado en clásicos como Scorched Earth o Worms. <br/>El objetivo principal es controlar un tanque (o un equipo de tanques) y eliminar a los oponentes utilizando proyectiles con trayectorias parabólicas, teniendo en cuenta la potencia, el ángulo de disparo y el terreno destructible.',
+    githubLink: 'https://gitlab.com/dresua/prog2d-pec3',
+    demoLink: 'https://play.unity.com/en/games/a4254229-5471-419f-b4fa-ad6791bc9335/the-tanksss', // Si no tienes demo, puedes poner null
+    image: './images/the_tanksss.png',    // Si no tienes imagen, puedes poner null
+     technologies: [
+      'Unity',
+      'C#',
+     ],
+  },
   // Añade más proyectos aquí siguiendo el mismo formato
 ];
 
