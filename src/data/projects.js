@@ -164,6 +164,18 @@ const projects = [
       'C#',
      ],
   },
+        {
+    id: 14,
+    title: 'FighteRobots - Juego de lucha de robots 2.5D',
+    description: 'Un juego de lucha 2.5D al estilo arcade desarrollado en Unity, donde robots de combate se enfrentan en una arena futurista. Combina mecánicas clásicas de juegos de lucha con físicas 2.5D.',
+    githubLink: 'https://gitlab.com/dresua/fighterobots',
+    demoLink: 'https://play.unity.com/en/games/e983c8b5-7ca0-43c4-81ad-8c386af994f3/fighterobots', // Si no tienes demo, puedes poner null
+    image: './images/fighterobots.png',    // Si no tienes imagen, puedes poner null
+     technologies: [
+      'Unity',
+      'C#',
+     ],
+  },
   // Añade más proyectos aquí siguiendo el mismo formato
 ];
 
