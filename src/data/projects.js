@@ -176,6 +176,18 @@ const projects = [
       'C#',
      ],
   },
+          {
+    id: 15,
+    title: 'Dingo\'s Journey - Twin-Stick Shooter 2D',
+    description: 'Este proyecto consiste en el desarrollo de un videojuego twin-stick shooter en 2D llamado Dingo\'s Journey e inspirado en el minijuego "Journey of the Prairie King" de Stardew Valley. <br/> El objetivo principal es sobrevivir oleadas de enemigos que aparecen desde los bordes de la pantalla, utilizando controles separados para el movimiento (WASD) y el disparo (flechas direccionales). <br/> El juego incluye un sistema de vidas, progresión por niveles, enemigos con inteligencia artificial, efectos de sonido y música, además de una interfaz completa con menú de pausa y pantalla de game over.',
+    githubLink: 'https://gitlab.com/dresua/prog2d-pr',
+    demoLink: 'https://play.unity.com/en/games/2e80740d-2dd0-44c3-b095-c56a2f5fa444/dingos-journey', // Si no tienes demo, puedes poner null
+    image: './images/dingo.gif',    // Si no tienes imagen, puedes poner null
+     technologies: [
+      'Unity',
+      'C#',
+     ],
+  }
   // Añade más proyectos aquí siguiendo el mismo formato
 ];
 
