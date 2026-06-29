@@ -6,7 +6,8 @@ Definidas en `src/styles/global.css` bajo `:root`. Disponibles en todos los comp
 
 ```css
 :root {
-  --primary-color:      #007bff;   /* Azul principal — botones, enlaces, CTA */
+  --primary-color:      #147a8a;   /* Azul verdoso principal — botones, enlaces, CTA */
+  --primary-hover:      #0f5f6b;   /* Variante hover del color principal */
   --secondary-color:    #6c757d;   /* Gris — textos secundarios */
   --background-light:   #f8f9fa;   /* Fondo general de la página */
   --background-dark:    #282c34;   /* Fondo del header y footer */
@@ -26,7 +27,8 @@ Definidas en `src/styles/global.css` bajo `:root`. Disponibles en todos los comp
 
 | Rol | Color | Valor |
 |-----|-------|-------|
-| Acción / enlace | Azul principal | `#007bff` |
+| Acción / enlace | Azul verdoso principal | `#147a8a` |
+| Hover de acción | Azul verdoso oscuro | `#0f5f6b` |
 | Header / Footer | Gris oscuro | `#282c34` |
 | Fondo de página | Gris muy claro | `#f8f9fa` |
 | Texto principal | Casi negro | `#212529` |
@@ -61,7 +63,7 @@ Cada componente tiene su propio archivo CSS en `src/styles/`. Los estilos global
 | `About.css` | Flex layout perfil + texto, imagen circular, hover scale |
 | `ModuleCard.css` | Tarjeta del carousel, hover transform, botón de enlace |
 | `Projects.css` | Grid de proyectos, chips de filtro (activo/inactivo), botón reset, botón "mostrar más" |
-| `ProjectCard.css` | Imagen de proyecto (200px, `object-fit: cover`), sección de tecnologías |
+| `ProjectCard.css` | Imagen de proyecto (200px, `object-fit: cover`) o placeholder de color, sección de tecnologías |
 | `TechChip.css` | Badge inline-flex, `border-radius: 20px`, `box-shadow`, icono SVG |
 | `YouTubeVideoCard.css` | Contenedor responsive 16:9 (`padding-bottom: 56.25%`) |
 | `Contact.css` | Formulario centrado, estados de foco (borde azul), mensajes de error |
@@ -105,7 +107,9 @@ Los chips de filtro usan opacidad y `filter: grayscale(80%)` para el estado inac
 ## Notas para modificaciones visuales
 
 - Para cambiar el color de acento principal, basta con actualizar `--primary-color` en `global.css`.
+- Para mantener consistencia en botones y enlaces, ajustar también `--primary-hover` junto con `--primary-color`.
 - Para cambiar el fondo del header/footer, actualizar `--background-dark`.
 - Los colores de los TechChips se gestionan exclusivamente en `src/data/technologies.js`.
 - Las sombras de tarjetas usan las variables `--shadow-light` y `--shadow-medium` — modificarlas afecta a todas las tarjetas del sitio.
 - El separador decorativo bajo los `h2` se genera con `::after` en `global.css` — es un buen punto para cambiar el color de acento de las secciones.
+- Si un proyecto no tiene imagen (`image: null`), `ProjectCard` renderiza un bloque de color basado en la primera tecnología del proyecto para mantener altura y consistencia visual del grid.

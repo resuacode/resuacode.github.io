@@ -4,11 +4,22 @@ import '../styles/ProjectCard.css';
 import TechChip from './TechChip';
 
 function ProjectCard({ title, description, githubLink, demoLink, image, technologies }) {
+  const firstTech = technologies?.[0];
+  const placeholderColor = firstTech?.backgroundColor || '#6c757d';
+
   return (
     <div className="project-card">
-      {image && ( // Solo renderiza la imagen si existe
+      {image ? ( // Solo renderiza la imagen si existe
         <div className="project-image-container">
           <img src={image} alt={`Captura de pantalla de ${title}`} className="project-image" />
+        </div>
+      ) : (
+        <div
+          className="project-image-placeholder"
+          style={{ backgroundColor: placeholderColor }}
+          aria-label={`Placeholder de color para ${title}`}
+        >
+          <span>{title}</span>
         </div>
       )}
       <div className="project-content">

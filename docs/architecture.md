@@ -79,6 +79,7 @@ Tarjeta individual de proyecto.
 | `technologies` | string[] | Nombres de tecnologías |
 
 > Usa `dangerouslySetInnerHTML` para renderizar la descripción.
+> Si `image` es `null`, renderiza un placeholder de color basado en la primera tecnología del proyecto.
 
 ### `TechChip`
 Badge visual de una tecnología concreta.

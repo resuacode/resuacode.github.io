@@ -2,7 +2,8 @@
 
 /* --- Variables CSS Globales --- */
 :root {
-  --primary-color: #007bff;
+  --primary-color: #147a8a;
+  --primary-hover: #0f5f6b;
   --secondary-color: #6c757d;
   --background-light: #f8f9fa;
   --background-dark: #282c34;
