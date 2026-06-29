@@ -6,6 +6,9 @@ import TechChip from './TechChip';
 function ProjectCard({ title, description, githubLink, demoLink, image, technologies }) {
   const firstTech = technologies?.[0];
   const placeholderColor = firstTech?.backgroundColor || '#6c757d';
+  const placeholderStyle = {
+    '--placeholder-color': placeholderColor,
+  };
 
   return (
     <div className="project-card">
@@ -16,7 +19,7 @@ function ProjectCard({ title, description, githubLink, demoLink, image, technolo
       ) : (
         <div
           className="project-image-placeholder"
-          style={{ backgroundColor: placeholderColor }}
+          style={placeholderStyle}
           aria-label={`Placeholder de color para ${title}`}
         >
           <span>{title}</span>

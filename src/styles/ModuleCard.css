@@ -65,7 +65,7 @@
   font-weight: bold;
   transition: background-color 0.3s ease;
   align-self: center;
-  margin-top: auto;
+  margin-top: 10px;
 }
 
 .module-link:hover {

@@ -61,9 +61,9 @@ Cada componente tiene su propio archivo CSS en `src/styles/`. Los estilos global
 | `global.css` | Variables `:root`, reset, layout base (`.main-content`, `section`), estilos de `h2`, carousel wrapper |
 | `Header.css` | Navegación fija, hamburger menu, hover underline |
 | `About.css` | Flex layout perfil + texto, imagen circular, hover scale |
-| `ModuleCard.css` | Tarjeta del carousel, hover transform, botón de enlace |
+| `ModuleCard.css` | Tarjeta del carousel, hover transform, botón de enlace con separación adicional respecto a tecnologías |
 | `Projects.css` | Grid de proyectos, chips de filtro (activo/inactivo), botón reset, botón "mostrar más" |
-| `ProjectCard.css` | Imagen de proyecto (200px, `object-fit: cover`) o placeholder de color, sección de tecnologías |
+| `ProjectCard.css` | Imagen de proyecto (200px, `object-fit: cover`) o placeholder con degradado cromático, sección de tecnologías |
 | `TechChip.css` | Badge inline-flex, `border-radius: 20px`, `box-shadow`, icono SVG |
 | `YouTubeVideoCard.css` | Contenedor responsive 16:9 (`padding-bottom: 56.25%`) |
 | `Contact.css` | Formulario centrado, estados de foco (borde azul), mensajes de error |
@@ -112,4 +112,4 @@ Los chips de filtro usan opacidad y `filter: grayscale(80%)` para el estado inac
 - Los colores de los TechChips se gestionan exclusivamente en `src/data/technologies.js`.
 - Las sombras de tarjetas usan las variables `--shadow-light` y `--shadow-medium` — modificarlas afecta a todas las tarjetas del sitio.
 - El separador decorativo bajo los `h2` se genera con `::after` en `global.css` — es un buen punto para cambiar el color de acento de las secciones.
-- Si un proyecto no tiene imagen (`image: null`), `ProjectCard` renderiza un bloque de color basado en la primera tecnología del proyecto para mantener altura y consistencia visual del grid.
+- Si un proyecto no tiene imagen (`image: null`), `ProjectCard` renderiza un placeholder con degradado basado en la primera tecnología del proyecto para mantener altura y consistencia visual del grid.
